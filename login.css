@@ -1,0 +1,124 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #004080, #0073e6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Floating emojis */
+.music-notes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.music-notes span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 2rem;
+  animation: floatUp 9s linear infinite;
+  opacity: 0.7;
+}
+
+.music-notes span:nth-child(1) { left: 15%; animation-delay: 0s; }
+.music-notes span:nth-child(2) { left: 40%; animation-delay: 2s; }
+.music-notes span:nth-child(3) { left: 65%; animation-delay: 4s; }
+.music-notes span:nth-child(4) { left: 80%; animation-delay: 1s; }
+.music-notes span:nth-child(5) { left: 25%; animation-delay: 3s; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form box (login & signup) */
+.login-container {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.login-container label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #444;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #004080;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #0059b3;
+}
+
+.login-container p {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #555;
+}
+
+.login-container p a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-container p a:hover {
+  text-decoration: underline;
+}
